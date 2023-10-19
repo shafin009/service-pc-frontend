@@ -1,0 +1,72 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "publicationDate": "1960",
+    "comments": []
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "publicationDate": "1813",
+    "comments": []
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "publicationDate": "1925",
+    "comments": []
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "publicationDate": "1813",
+    "comments": []
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Coming-of-age",
+    "publicationDate": "1951",
+    "comments": []
+  },
+  {
+    "title": "To Kill a Kingdom",
+    "author": "Alexandra Christo",
+    "genre": "Fantasy",
+    "publicationDate": "2018",
+    "comments": []
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publicationDate": "1937",
+    "comments": []
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": "Mystery",
+    "publicationDate": "2003",
+    "comments": []
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Science Fiction",
+    "publicationDate": "2008",
+    "comments": []
+  },
+  {
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "publicationDate": "1997",
+    "comments": []
+  }
+]
