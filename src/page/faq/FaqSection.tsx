@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const FaqSection = () => {
   const [faqs, setFaqs] = useState([]);
-  const apiUrl = "http://localhost:5000/api/v1/faq";
+  const apiUrl = "https://pc-service-backends.vercel.app/api/v1/faq";
 
   useEffect(() => {
     fetch(apiUrl)

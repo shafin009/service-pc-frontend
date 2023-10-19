@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomeServices = () => {
   const [services, setServices] = useState([]);
-  const apiUrl = "http://localhost:5000/api/v1/service";
+  const apiUrl = "https://pc-service-backends.vercel.app/api/v1/service";
 
   useEffect(() => {
     fetch(apiUrl)

@@ -10,7 +10,7 @@ const Feedback = () => {
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/feedback/create-feedback",
+        "https://pc-service-backends.vercel.app/api/v1/feedback/create-feedback",
         {
           method: "POST",
           headers: {

@@ -8,7 +8,7 @@ import jwtDecode from "jwt-decode";
 
 const UpdateService = () => {
   const { id } = useParams<{ id: string }>();
-  const apiUrl = `http://localhost:5000/api/v1/service/${id}`;
+  const apiUrl = `https://pc-service-backends.vercel.app/api/v1/service/${id}`;
   const { register, handleSubmit, setValue } = useForm();
   const [service, setService] = useState(null); // Initialize as null
   const navigate = useNavigate();

@@ -28,7 +28,6 @@ const Signup: React.FC = () => {
         reset();
       }
     } catch (error) {
-      console.error(error.message);
       toast.error("Sign up failed");
     }
   };

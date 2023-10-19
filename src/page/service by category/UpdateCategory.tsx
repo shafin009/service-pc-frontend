@@ -6,7 +6,7 @@ import Loading from "@/utility/Loading";
 
 const UpdateCategory = () => {
   const { id } = useParams<{ id: string }>();
-  const apiUrl = `http://localhost:5000/api/v1/category/${id}`;
+  const apiUrl = `https://pc-service-backends.vercel.app/api/v1/category/${id}`;
   const { register, handleSubmit, setValue } = useForm();
   const [category, setCategory] = useState(null);
   const navigate = useNavigate();

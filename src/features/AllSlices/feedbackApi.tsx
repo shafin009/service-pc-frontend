@@ -1,4 +1,4 @@
-import { TypesList } from "@/features/api/typelist";
+import { tagTypes } from "@/features/api/typelist";
 import { baseApi } from "@/utility/BaseQueary";
 
 export const authApi = baseApi.injectEndpoints({
@@ -8,7 +8,7 @@ export const authApi = baseApi.injectEndpoints({
         url: `/service/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: [TypesList.service],
+      invalidatesTags: [tagTypes.service],
     }),
   }),
 });

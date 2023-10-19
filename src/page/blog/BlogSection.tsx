@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const BlogSection = () => {
   const [blogs, setBlog] = useState([]);
-  const apiUrl = "http://localhost:5000/api/v1/blog";
+  const apiUrl = "https://pc-service-backends.vercel.app/api/v1/blog";
 
   useEffect(() => {
     fetch(apiUrl)

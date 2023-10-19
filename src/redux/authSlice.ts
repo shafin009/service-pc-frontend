@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { IUser, tokenKey } from "@/types/tokenKey";
 import { getFromLocalStorage } from "@/utility/LocalStorage";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
@@ -25,13 +27,16 @@ const initialState: IState = {
 export const createUser = createAsyncThunk(
   "user/createUser",
   async (info: Omit<IUser, "id" | "role" | "profileImage">) => {
-    const res = await fetch("http://localhost:5000/api/v1/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const res = await fetch(
+      "https://pc-service-backends.vercel.app/api/v1/auth/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(info),
       },
-      body: JSON.stringify(info),
-    });
+    );
     const data = await res.json();
     if (data.success) {
       console.log({ data });
@@ -45,13 +50,16 @@ export const createUser = createAsyncThunk(
 export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (info: ICredential) => {
-    const res = await fetch("http://localhost:5000/api/v1/auth/signIn", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const res = await fetch(
+      "https://pc-service-backends.vercel.app/api/v1/auth/signIn",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(info),
       },
-      body: JSON.stringify(info),
-    });
+    );
     const data = await res.json();
     if (data.success) {
       return data.data;
@@ -63,13 +71,16 @@ export const loginUser = createAsyncThunk(
 export const loginUserWithToken = createAsyncThunk(
   "user/loginUserWithToken",
   async () => {
-    const res = await fetch("http://localhost:5000/api/v1/profile", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: getFromLocalStorage(tokenKey) || "",
+    const res = await fetch(
+      "https://pc-service-backends.vercel.app/api/v1/profile",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: getFromLocalStorage(tokenKey) || "",
+        },
       },
-    });
+    );
     const data = await res.json();
     if (data.success) {
       return data.data;
@@ -156,7 +167,7 @@ const authSlice = createSlice({
         state.isLoading = false;
       })
 
-      .addCase(loginUserWithToken.rejected, (state, action) => {
+      .addCase(loginUserWithToken.rejected, (state, _action) => {
         state.user = null;
         state.isLoading = false;
       });

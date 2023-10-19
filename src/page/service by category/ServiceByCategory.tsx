@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ServiceByCategory = () => {
   const [categories, setCategories] = useState([]);
-  const apiUrl = "http://localhost:5000/api/v1/category";
+  const apiUrl = "https://pc-service-backends.vercel.app/api/v1/category";
 
   useEffect(() => {
     fetch(apiUrl)
@@ -40,7 +40,6 @@ const ServiceByCategory = () => {
 
       <br />
 
-     
       <br />
     </div>
   );
